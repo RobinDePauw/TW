@@ -92,10 +92,11 @@ twcheese.loadConfig = function()
 	 * @return	arrival:Date
 	 */
 	twcheese.arrivalToDate = function(arrivalString)
-	{		
+	{	
+		
+		var year = arrivalString.substring(0,2);
 		var month = arrivalString.substring(3,5);
-		var day = arrivalString.substring(0,2);
-		var year = arrivalString.substring(6,8);
+		var day = arrivalString.substring(6,8);
 		var hours = arrivalString.substring(9,11);
 		var minutes = arrivalString.substring(12,14);
 		var seconds = arrivalString.substring(15,17);

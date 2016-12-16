@@ -94,16 +94,15 @@ twcheese.loadConfig = function()
 	twcheese.arrivalToDate = function(arrivalString)
 	{	
 
-		var year = arrivalString.substring(0,2);
-		var month = arrivalString.substring(3,5);
-		var day = arrivalString.substring(6,8);
-		var hours = arrivalString.substring(9,11);
-		var minutes = arrivalString.substring(12,14);
-		var seconds = arrivalString.substring(15,17);
+		var year = parseInt("20".arrivalString.substring(0,2));
+		var month = parseInt(arrivalString.substring(3,5));
+		var day = parseInt(arrivalString.substring(6,8));
+		var hours = parseInt(arrivalString.substring(9,11));
+		var minutes = parseInt(arrivalString.substring(12,14));
+		var seconds = parseInt(arrivalString.substring(15,17));
 		var milliseconds = 0;
 		if(arrivalString.search('grey')!=-1)
-			milliseconds = arrivalString.substring(arrivalString.indexOf('grey')+7,arrivalString.indexOf('grey')+10);
-		
+			milliseconds = parseInt(arrivalString.substring(arrivalString.indexOf('grey')+7,arrivalString.indexOf('grey')+10));
 		//alert(month + '\n' + day + '\n' + year + '\n' + hour + '\n' + minutes + '\n' + seconds + '\n' + milliseconds);
 		
 		var arrivalTime = new Date(year, month, day, hours, minutes, seconds, milliseconds);

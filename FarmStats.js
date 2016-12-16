@@ -518,7 +518,7 @@ twcheese.loadConfig = function()
 							var optionStartTime = startTime;//the start of the hour (00 minutes)
 							optionStartTime.setMinutes(0);
 							optionStartTime.setSeconds(0);
-
+							optionsNeeded = 12;
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									
@@ -547,8 +547,7 @@ twcheese.loadConfig = function()
 							summationTo.innerHTML = '';
 							var optionsNeeded = Math.abs(endTime - startTime) / 3600000; 
 							var optionStartTime = startTime;//the start of the hour (00 minutes)
-							optionStartTime.setMinutes(0);
-							optionStartTime.setSeconds(0);
+							optionsNeeded = 12;
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									

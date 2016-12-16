@@ -515,6 +515,7 @@ twcheese.loadConfig = function()
 							summationFrom.innerHTML = '';
 							var optionsNeeded = endTime.getTime()/3600000 - Math.floor(startTime.getTime()/3600000); //number of hours between the start of the current hour and the latest incoming haul
 							var optionStartTime = new Date(Math.floor(startTime.getTime()/3600000)*3600000); //the start of the hour (00 minutes)
+							optionsNeeded = 12;
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									
@@ -543,6 +544,7 @@ twcheese.loadConfig = function()
 							summationTo.innerHTML = '';
 							var optionsNeeded = endTime.getTime()/3600000 - Math.floor(startTime.getTime()/3600000); //number of hours between the start of the current hour and the latest incoming haul
 							var optionStartTime = new Date(Math.floor(startTime.getTime()/3600000)*3600000); //the start of the hour (00 minutes)
+							optionsNeeded = 12;
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									

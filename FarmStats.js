@@ -513,7 +513,7 @@ twcheese.loadConfig = function()
 						
 							/*==== create options for From menu ====*/
 							summationFrom.innerHTML = '';
-							var optionsNeeded = endTime.getTime()/3600000 - Math.floor(startTime.getTime()/3600000); //number of hours between the start of the current hour and the latest incoming haul
+							var optionsNeeded = Math.abs(endTime - startTime) / 3600000; //number of hours between the start of the current hour and the latest incoming haul
 							var optionStartTime = new Date(Math.floor(startTime.getTime()/3600000)*3600000); //the start of the hour (00 minutes)
 							optionsNeeded = 12;
 							for(var i=0; i<=optionsNeeded; i++)

@@ -93,7 +93,7 @@ twcheese.loadConfig = function()
 	 */
 	twcheese.arrivalToDate = function(arrivalString)
 	{	
-		
+
 		var year = arrivalString.substring(0,2);
 		var month = arrivalString.substring(3,5);
 		var day = arrivalString.substring(6,8);
@@ -515,7 +515,10 @@ twcheese.loadConfig = function()
 							/*==== create options for From menu ====*/
 							summationFrom.innerHTML = '';
 							var optionsNeeded = Math.abs(endTime - startTime) / 3600000; 
-							var optionStartTime = new Date(Math.floor(startTime.getTime()/3600000)*3600000); //the start of the hour (00 minutes)
+							var optionStartTime = startTime;//the start of the hour (00 minutes)
+							optionStartTime.setMinutes(0);
+							optionStartTime.setSeconds(0);
+
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									
@@ -543,7 +546,9 @@ twcheese.loadConfig = function()
 							/*==== create options for To menu ====*/
 							summationTo.innerHTML = '';
 							var optionsNeeded = Math.abs(endTime - startTime) / 3600000; 
-							var optionStartTime = new Date(Math.floor(startTime.getTime()/3600000)*3600000); //the start of the hour (00 minutes)
+							var optionStartTime = startTime;//the start of the hour (00 minutes)
+							optionStartTime.setMinutes(0);
+							optionStartTime.setSeconds(0);
 							for(var i=0; i<=optionsNeeded; i++)
 							{									
 								var arrivalDay = optionStartTime.getTime()/86400000;									

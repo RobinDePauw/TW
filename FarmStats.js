@@ -665,7 +665,7 @@ twcheese.loadConfig = function()
 		/*==== initialize interactive components ====*/		
 		document.getElementById('twcheese_pillaging_stats_from').onchange = container.showResults;
 		document.getElementById('twcheese_pillaging_stats_to').onchange = container.showResults;		
-		document.getElementById('twcheese_pillaging_stats_to').childNodes[document.getElementById('twcheese_pillaging_stats_to').childNodes.length-1].selected = "selected"; 
+		//document.getElementById('twcheese_pillaging_stats_to').childNodes[document.getElementById('twcheese_pillaging_stats_to').childNodes.length-1].selected = "selected"; 
 		container.showResults();
 		
 	};

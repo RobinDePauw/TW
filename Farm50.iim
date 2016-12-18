@@ -1,0 +1,169 @@
+﻿VERSION BUILD=9030808 RECORDER=FX
+SET !REPLAYSPEED FAST
+SET !TIMEOUT_STEP 1
+SET !EXTRACT_TEST_POPUP NO
+SET !ERRORIGNORE YES
+
+URL GOTO=https://www.tribalwars.nl//
+TAG POS=1 TYPE=SPAN ATTR=TXT:Aanmelden
+TAG POS=1 TYPE=SPAN ATTR=TXT:Wereld<SP>53
+
+
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm
+TAG POS=1 TYPE=H2 ATTR=TXT:Bot-bescherming EXTRACT=TXT
+SET !VAR9 {{!EXTRACT}}
+SET !EXTRACT NULL
+SET !VAR8 EVAL("var s=\"{{!VAR9}}\";var x = 0;if(s.indexOf(\"Bot\")>=0){x=1000;}else{x=1;};x;")
+SET !LOOP {{!VAR8}}
+TAG POS=1 TYPE=TD ATTR=ID:light EXTRACT = TXT
+SET !VAR1 {{!EXTRACT}}
+SET !EXTRACT NULL
+SET !VAR2 EVAL("if({{!VAR1}}>=72){var s=1;}else{var s=0;};s;")
+
+TAG POS=EVAL("29*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("32*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("35*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("38*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("41*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("44*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("47*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("50*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("53*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("56*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("59*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("62*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("65*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("68*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("71*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("74*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("77*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("80*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("83*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("86*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("89*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("92*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("95*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("98*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("101*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("104*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("107*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("110*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("113*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("116*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("119*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("122*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("125*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("128*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("131*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("134*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("137*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("140*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("143*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("146*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("149*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("152*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("155*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("158*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("161*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("164*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("167*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("170*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("173*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
+TAG POS=EVAL("176*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
+
+
+
+'len94
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4372&light=2
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'Erebos
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=5349&light=3
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'Mark V
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=3220&light=3
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'dekal
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4083&light=1
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'cefres
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4036&light=1
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'@!!
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=3743&light=1
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'NAI RE
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=3721&light=2
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'.Mahiro
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4086&light=1
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'Moontown001
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=5133&light=3
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+'palterbwois
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=3721&light=3
+TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
+
+
+
+WAIT SECONDS=EVAL("[(600+Math.floor(Math.random()*(60)))*{{!VAR2}}]")
+WAIT SECONDS=EVAL("[(240+Math.floor(Math.random()*(60)))*(1-{{!VAR2}})]")

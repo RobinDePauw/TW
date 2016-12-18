@@ -159,7 +159,7 @@ URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=51
 TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
 TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
 'palterbwois
-URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=3721&light=3
+URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4493&light=3
 TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
 TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
 

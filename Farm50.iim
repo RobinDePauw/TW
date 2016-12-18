@@ -4,11 +4,13 @@ SET !TIMEOUT_STEP 1
 SET !EXTRACT_TEST_POPUP NO
 SET !ERRORIGNORE YES
 
+
+'Login
 URL GOTO=https://www.tribalwars.nl//
 TAG POS=1 TYPE=SPAN ATTR=TXT:Aanmelden
 TAG POS=1 TYPE=SPAN ATTR=TXT:Wereld<SP>53
 
-
+'Farm assistent and check LC
 URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm
 TAG POS=1 TYPE=H2 ATTR=TXT:Bot-bescherming EXTRACT=TXT
 SET !VAR9 {{!EXTRACT}}
@@ -20,6 +22,8 @@ SET !VAR1 {{!EXTRACT}}
 SET !EXTRACT NULL
 SET !VAR2 EVAL("if({{!VAR1}}>=72){var s=1;}else{var s=0;};s;")
 
+
+'B-farm the first 50 villages
 TAG POS=EVAL("29*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
 WAIT SECONDS=EVAL("[(0.20+(Math.random()*(0.05)))*{{!VAR2}}]")
 TAG POS=EVAL("32*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.php?village=3082&screen=am_farm#
@@ -122,6 +126,8 @@ TAG POS=EVAL("176*{{!VAR2}};") TYPE=A ATTR=HREF:https://nl53.tribalwars.nl/game.
 
 
 
+'Send troops to players
+
 'len94
 URL GOTO=https://nl53.tribalwars.nl/game.php?village=3082&screen=place&target=4372&light=2
 TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_attack
@@ -164,6 +170,8 @@ TAG POS={{!VAR2}} TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:target_att
 TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:command-data-form ATTR=ID:troop_confirm_go
 
 
-
+'Wait 10-11 min if the bot ran
 WAIT SECONDS=EVAL("[(600+Math.floor(Math.random()*(60)))*{{!VAR2}}]")
+
+'Wait 5-6lin if there was not enough lc
 WAIT SECONDS=EVAL("[(240+Math.floor(Math.random()*(60)))*(1-{{!VAR2}})]")
